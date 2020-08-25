@@ -37,6 +37,7 @@
   /* padding below filter form */
   .padding_form {
     margin-bottom: 10px ;
+    margin-top: 10px;
   }
 
   /* code from example index.html provided in HW 14 */
@@ -51,9 +52,9 @@
     background-position:center;
     background-size: cover;
   }
-
+/* 
   .form {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */

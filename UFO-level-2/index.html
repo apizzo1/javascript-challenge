@@ -26,12 +26,13 @@
 
         <!-- Filter Form -->
         <div>
-            <form class = "form">
-                <div class="form-group">
+            <form class="form">
+                <!-- <div class="form-group">
                     <label class="col-form-label" for="inputDefault">Enter a date to search</label>
                     <input type="text" class="form-control filter_form form" placeholder="1/1/2010" id="inputDefault">
-                </div>
-                <button type="button" id = "button" class="btn btn-secondary padding_form">Filter</button>
+                    <input type="text" class="form-control filter_form form" placeholder="Test" id="inputDefault">
+                </div> -->
+                <button type="button" id="button" class="btn btn-secondary padding_form">Filter</button>
             </form>
         </div>
         <!-- format data table -->
@@ -47,6 +48,31 @@
                         <th scope="col">Duration</th>
                         <th scope="col">Comment</th>
                     </tr>
+                    <th>
+                        <form>
+                            <input type="text" class="form-control form" placeholder="1/1/2010" id="date">
+                        </form>
+                    </th>
+                    <th>
+                        <form>
+                            <input type="text" class="form-control form" placeholder="City" id="city">
+                        </form>
+                    </th>
+                    <th>
+                        <form>
+                            <input type="text" class="form-control form" placeholder="State" id="state">
+                        </form>
+                    </th>
+                    <th>
+                        <form>
+                            <input type="text" class="form-control form" placeholder="Country" id="country">
+                        </form>
+                    </th>
+                    <th>
+                        <form>
+                            <input type="text" class="form-control form" placeholder="Shape" id="shape">
+                        </form>
+                    </th>
                 </thead>
                 <tbody>
 
@@ -62,7 +88,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="static/data.js"></script>
     <script type="text/javascript" src="static/app.js"></script>
-    
+
 </body>
 
 </html>

@@ -21,6 +21,7 @@ tableData.forEach(sighting => {
 });
 
 
+
 // Create event handlers 
 button.on("click", FilterData);
 form.on("submit",FilterData);
@@ -35,14 +36,29 @@ function FilterData() {
   // source: 09-Par_Form_Filter activity
   tbody.html("")
 
-  // Select the input element and get the raw HTML node
-  var inputElement = d3.select("#inputDefault");
+  // Select the input elements
+  var inputElement_date = d3.select("#date");
+  var inputElement_city = d3.select("#city");
+  var inputElement_state = d3.select("#state");
+  var inputElement_country = d3.select("#country");
+  var inputElement_shape = d3.select("#shape");
 
-  // Get the value property of the input element
-  var inputValue = inputElement.property("value");
+  // Get the value property of the input elements
+  var inputValue_date = inputElement_date.property("value");
+  var inputValue_city = inputElement_city.property("value");
+  var inputValue_state = inputElement_state.property("value");
+  var inputValue_country = inputElement_country.property("value");
+  var inputValue_shape = inputElement_shape.property("value");
 
   // filter data.js for dates matching input value date
-  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+  var filteredData = tableData.filter(tableData => {
+    return (tableData.datetime === inputValue_date) && (tableData.city === inputValue_city);
+  });
+  
+
+  console.log(filteredData);
+  console.log(inputValue_date);
+  // console.log(inputValue_city);
 
   // // create new row for each sighting on filtered date
   filteredData.forEach(sighting => {
