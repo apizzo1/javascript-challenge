@@ -1,4 +1,23 @@
 
+/* IDs */
+
+
+#header1 {
+  font-size: 6rem;
+  font-weight: 300;
+  color: black;
+    /* source:https://www.kirupa.com/tricks/text_outline_effect.htm */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  margin-top: 10%;
+}
+
+#header2 {
+  color: black;
+}
+
+/* Classes */
+
 /* centering image */
 /* source: https://www.w3schools.com/howto/howto_css_image_center.asp */
 .center_img {
@@ -10,13 +29,13 @@
 
 /* changing filter inout box length */
 .filter_form {
-    width: 300px;
+    width: 200px;
 }
 
 /* image formatting */
-.ufo_img {
+/* .ufo_img {
     height: 300px;
-}
+} */
 
 /* Center text */
 .center_txt {
@@ -27,7 +46,6 @@
 
 /* updating jumbotron class from bootstrap */
 .jumbotron_update {
-    /* padding: 2rem 1rem; */
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     background-color: #073642;
@@ -37,23 +55,44 @@
   /* padding below filter form */
   .padding_form {
     margin-bottom: 10px ;
+    margin-top: 10px;
   }
+
+  .card_width {
+    max-width: 15rem;
+    height: 13rem;
+  }
+
+  .table_text {
+    text-align: center;
+  }
+
+  .table_border {
+    border: 2px solid rgba(255, 255, 255, 0.075);
+  }
+
+
+  /* animation delay for subtitle */
+.delay {
+  --animate-delay: 1.5s;
+}
 
   /* code from example index.html provided in HW 14 */
   .hero {
     position: relative;
-    height: 550px;
+    height: 650px;
     padding: 20px;
     margin: 0;
     background: black;
-    background-image: url("../UFO_image.jpg");
+    /* milky-way */
+    /* source: https://lithub.com/it-is-highly-unlikely-that-any-of-this-exists-on-the-origins-of-the-universe/ */
+    /* star_gazing */
+    /* source: https://unsplash.com/s/photos/universe */
+    background-image: url("../star_gazing.jpg");
     /* background-attachment: fixed; */
     background-position:center;
     background-size: cover;
+    background-position-y: bottom;
   }
 
-  .form {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+

@@ -7,20 +7,19 @@ var tbody = d3.select("tbody")
 // Select the button
 var button = d3.select("#button");
 
-// Select the form
-var form = d3.select("form");
+// Select the forms
+var form = d3.selectAll("form");
 
 // add all data to table to begin
 tableData.forEach(sighting => {
+  // for each signting append table row to table body
   var row = tbody.append("tr");
-
+// for each sighting, append table data tag (under corresponding table row) and fill in row data
   Object.entries(sighting).forEach(function([key, value]) {
     var cell = tbody.append("td");
     cell.text(value);
   });
 });
-
-
 
 // Create event handlers 
 button.on("click", FilterData);
@@ -45,32 +44,61 @@ function FilterData() {
 
   // Get the value property of the input elements
   var inputValue_date = inputElement_date.property("value");
-  var inputValue_city = inputElement_city.property("value");
-  var inputValue_state = inputElement_state.property("value");
-  var inputValue_country = inputElement_country.property("value");
-  var inputValue_shape = inputElement_shape.property("value");
+  var inputValue_city = inputElement_city.property("value").toLowerCase();
+  var inputValue_state = inputElement_state.property("value").toLowerCase();
+  var inputValue_country = inputElement_country.property("value").toLowerCase();
+  var inputValue_shape = inputElement_shape.property("value").toLowerCase();
 
-  // filter data.js for dates matching input value date
-  var filteredData = tableData.filter(tableData => {
-    return (tableData.datetime === inputValue_date) && (tableData.city === inputValue_city);
-  });
+// if statements to filter data based on what inputs were given
+// at the time of form "submit" or filter button click, each if statement will check for input and filter accordingly
+// all filters can be used simultaneously or only some can be used 
+  if (inputValue_date.length === 0) {
+    var date_data = tableData;
+  }
+  else {
+    var date_data = tableData.filter(tableData =>  tableData.datetime === inputValue_date);
+  }
+
+  if (inputValue_city.length === 0) {
+    var city_data = date_data;
+  }
+  else {
+    var city_data = date_data.filter(date_data =>  date_data.city === inputValue_city);
+  }
+
+  if (inputValue_state.length === 0) {
+    var state_data = city_data;
+  }
+  else {
+    var state_data = city_data.filter(city_data =>  city_data.state === inputValue_state);
+  }
   
+  if (inputValue_country.length === 0) {
+    var country_data = state_data;
+  }
+  else {
+    var country_data = state_data.filter(state_data =>  state_data.country === inputValue_country);
+  }
 
-  console.log(filteredData);
-  console.log(inputValue_date);
-  // console.log(inputValue_city);
+  if (inputValue_shape.length === 0) {
+    var shape_data = country_data;
+  }
+  else {
+    var shape_data = country_data.filter(country_data =>  country_data.shape === inputValue_shape);
+  }
 
-  // // create new row for each sighting on filtered date
-  filteredData.forEach(sighting => {
+  // // create new row for each sighting on filtered data
+  // shape_data is the last filter so this is the final data to output
+  shape_data.forEach(sighting => {
+    // for each filtered signting append table row to table body
     var row = tbody.append("tr");
     console.log(sighting);
-
+  // for each filtered sighting, append table data tag (under corresponding table row) and fill in row data
     Object.entries(sighting).forEach(function([key, value]) {
       var cell = tbody.append("td");
       cell.text(value);
     });
   });
- 
  
 };
   

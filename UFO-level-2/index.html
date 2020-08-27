@@ -8,71 +8,84 @@
     <!-- Bootstrap theme -->
     <link rel="stylesheet" href="static/bootstrap.css">
     <link rel="stylesheet" href="static/style.css">
+    <!-- source: https://animate.style/#attention_seekers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 </head>
 
 <body>
     <!-- navbar  -->
-    <nav class="navbar  navbar-dark bg-primary">
+    <nav class="navbar  navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">UFO Sightings</a>
     </nav>
-    <div class="container">
+    
+    <div class="container-fluid">
         <div class="jumbotron_update hero">
-            <h1 class="center_txt">UFO Sightings</h1>
-            <!-- <h1 class = "display-3 center_txt">UFO Sightings</h1> -->
-            <!-- adding UFO image -->
-            <!-- source:https://www.insider.com/ufo-sightings-have-been-steadily-decreasing-2019-6 -->
-            <!-- <img class="hero" src="UFO_image.jpg" alt="UFO image from insider.com"> -->
+            <!-- animations source: https://animate.style/#attention_seekers -->
+            <h1 id = "header1" class="center_txt animate__animated animate__fadeInUp">UFO Sightings</h1>
+            <!-- animations source: https://animate.style/#attention_seekers -->
+            <h3 id = "header2" class = "center_txt animate__animated animate__fadeInUp animate__delay-1s">What will you find?</h3>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- filter button and label -->
+        <div class="card border-secondary mb-3 padding_form card_width">
+            <div class="card-header">
+                <strong>
+                    Filter Sightings
+                </strong>
+            </div>
+            <div class="card-body">
+                <button type="button" id="button" class="btn btn-secondary padding_form">Filter</button>
+                <h6 class="card-title">Enter search criteria below</h6>
+            </div>
         </div>
 
-        <!-- Filter Form -->
-        <div>
-            <form class="form">
-                <!-- <div class="form-group">
-                    <label class="col-form-label" for="inputDefault">Enter a date to search</label>
-                    <input type="text" class="form-control filter_form form" placeholder="1/1/2010" id="inputDefault">
-                    <input type="text" class="form-control filter_form form" placeholder="Test" id="inputDefault">
-                </div> -->
-                <button type="button" id="button" class="btn btn-secondary padding_form">Filter</button>
-            </form>
-        </div>
         <!-- format data table -->
         <div>
-            <table class="table table-hover">
+            <table class="table table-hover table_border">
                 <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">City</th>
-                        <th scope="col">State</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Shape</th>
-                        <th scope="col">Duration</th>
-                        <th scope="col">Comment</th>
+                    <tr class = "table-active"> 
+                        <th class = "table_text" scope="col">Date</th>
+                        <th class = "table_text" scope="col">City</th>
+                        <th class = "table_text" scope="col">State</th>
+                        <th class = "table_text" scope="col">Country</th>
+                        <th class = "table_text" scope="col">Shape</th>
+                        <th class = "table_text" scope="col">Duration</th>
+                        <th class = "table_text" scope="col">Comment</th>
                     </tr>
-                    <th>
-                        <form>
-                            <input type="text" class="form-control form" placeholder="1/1/2010" id="date">
-                        </form>
-                    </th>
-                    <th>
-                        <form>
-                            <input type="text" class="form-control form" placeholder="City" id="city">
-                        </form>
-                    </th>
-                    <th>
-                        <form>
-                            <input type="text" class="form-control form" placeholder="State" id="state">
-                        </form>
-                    </th>
-                    <th>
-                        <form>
-                            <input type="text" class="form-control form" placeholder="Country" id="country">
-                        </form>
-                    </th>
-                    <th>
-                        <form>
-                            <input type="text" class="form-control form" placeholder="Shape" id="shape">
-                        </form>
-                    </th>
+                    <!-- Filter Forms -->
+                    <tr class="table-active">
+                        <th>
+                            <form>
+                                <input type="text" class="form-control form" placeholder="1/1/2010" id="date">
+                            </form>
+                        </th>
+                        <th>
+                            <form>
+                                <input type="text" class="form-control form" placeholder="city" id="city">
+                            </form>
+                        </th>
+                        <th>
+                            <form>
+                                <input type="text" class="form-control form" placeholder="state" id="state">
+                            </form>
+                        </th>
+                        <th>
+                            <form>
+                                <input type="text" class="form-control form" placeholder="country" id="country">
+                            </form>
+                        </th>
+                        <th>
+                            <form>
+                                <input type="text" class="form-control form" placeholder="shape" id="shape">
+                            </form>
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+               
                 </thead>
                 <tbody>
 
