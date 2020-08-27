@@ -1,7 +1,6 @@
-
 /* IDs */
 
-
+/* main title details */
 #header1 {
   font-size: 6rem;
   font-weight: 300;
@@ -12,37 +11,22 @@
   margin-top: 10%;
 }
 
+/* subtitle details */
 #header2 {
   color: black;
 }
 
 /* Classes */
 
-/* centering image */
-/* source: https://www.w3schools.com/howto/howto_css_image_center.asp */
-.center_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-} 
-
 /* changing filter inout box length */
 .filter_form {
     width: 200px;
 }
 
-/* image formatting */
-/* .ufo_img {
-    height: 300px;
-} */
-
 /* Center text */
 .center_txt {
     text-align: center;
-    font-size: 4.5rem;
-    font-weight: 300;
-}
+}  
 
 /* updating jumbotron class from bootstrap */
 .jumbotron_update {
@@ -58,19 +42,21 @@
     margin-top: 10px;
   }
 
+  /* setting card dimensions with filter information */
   .card_width {
     max-width: 15rem;
     height: 13rem;
   }
 
+  /* format table text to be centered */
   .table_text {
     text-align: center;
   }
 
+  /* format table with borders */
   .table_border {
     border: 2px solid rgba(255, 255, 255, 0.075);
   }
-
 
   /* animation delay for subtitle */
 .delay {
@@ -78,18 +64,15 @@
 }
 
   /* code from example index.html provided in HW 14 */
+  /* background image details */
   .hero {
     position: relative;
     height: 650px;
     padding: 20px;
     margin: 0;
     background: black;
-    /* milky-way */
-    /* source: https://lithub.com/it-is-highly-unlikely-that-any-of-this-exists-on-the-origins-of-the-universe/ */
-    /* star_gazing */
-    /* source: https://unsplash.com/s/photos/universe */
-    background-image: url("../star_gazing.jpg");
-    /* background-attachment: fixed; */
+    /* trees_nightsky - source:https://unsplash.com/photos/UFqKI4QWd2k */
+    background-image: url("../Images/trees_nightsky.jpg");
     background-position:center;
     background-size: cover;
     background-position-y: bottom;

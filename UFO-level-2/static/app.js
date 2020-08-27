@@ -2,7 +2,7 @@
 var tableData = data;
 
 // select table body
-var tbody = d3.select("tbody")
+var tbody = d3.select("tbody");
 
 // Select the button
 var button = d3.select("#button");
@@ -33,7 +33,7 @@ function FilterData() {
 
   // clear table (remove any children from the table body
   // source: 09-Par_Form_Filter activity
-  tbody.html("")
+  tbody.html("");
 
   // Select the input elements
   var inputElement_date = d3.select("#date");
@@ -52,13 +52,18 @@ function FilterData() {
 // if statements to filter data based on what inputs were given
 // at the time of form "submit" or filter button click, each if statement will check for input and filter accordingly
 // all filters can be used simultaneously or only some can be used 
+
+// if user does not input a date, use tableData from data.js
   if (inputValue_date.length === 0) {
     var date_data = tableData;
   }
+  // if user does input date, filter tableData for desired date
   else {
     var date_data = tableData.filter(tableData =>  tableData.datetime === inputValue_date);
   }
 
+  // if statements continue, running through each input field and continuing to filter the data to meet all desired criteria
+  
   if (inputValue_city.length === 0) {
     var city_data = date_data;
   }
@@ -92,8 +97,8 @@ function FilterData() {
   shape_data.forEach(sighting => {
     // for each filtered signting append table row to table body
     var row = tbody.append("tr");
-    console.log(sighting);
-  // for each filtered sighting, append table data tag (under corresponding table row) and fill in row data
+   
+    // for each filtered sighting, append table data tag (under corresponding table row) and fill in row data
     Object.entries(sighting).forEach(function([key, value]) {
       var cell = tbody.append("td");
       cell.text(value);

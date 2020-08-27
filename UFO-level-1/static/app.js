@@ -2,7 +2,7 @@
 var tableData = data;
 
 // select table body
-var tbody = d3.select("tbody")
+var tbody = d3.select("tbody");
 
 // Select the button
 var button = d3.select("#button");
@@ -12,8 +12,9 @@ var form = d3.select("form");
 
 // add all data to table to begin
 tableData.forEach(sighting => {
+  // for each signting append table row to table body
   var row = tbody.append("tr");
-
+// for each sighting, append table data tag (under corresponding table row) and fill in row data
   Object.entries(sighting).forEach(function([key, value]) {
     var cell = tbody.append("td");
     cell.text(value);
@@ -33,9 +34,9 @@ function FilterData() {
 
   // clear table (remove any children from the table body
   // source: 09-Par_Form_Filter activity
-  tbody.html("")
+  tbody.html("");
 
-  // Select the input element and get the raw HTML node
+  // Select the input element 
   var inputElement = d3.select("#inputDefault");
 
   // Get the value property of the input element
@@ -46,9 +47,9 @@ function FilterData() {
 
   // // create new row for each sighting on filtered date
   filteredData.forEach(sighting => {
+    // for each filtered signting append table row to table body
     var row = tbody.append("tr");
-    console.log(sighting);
-
+    // for each filtered sighting, append table data tag (under corresponding table row) and fill in row data
     Object.entries(sighting).forEach(function([key, value]) {
       var cell = tbody.append("td");
       cell.text(value);
