@@ -79,6 +79,7 @@
     background-position-y: bottom;
   }
 
+  /* styling for when alert is visible to user */
   .alert_details {
     width: 450px;
     height:50px;
@@ -87,6 +88,7 @@
     visibility: visible;
   }
 
+  /* hide alert until user inputs criteria that cannot be found */
   .alert_hide {
     visibility: hidden;
   }
