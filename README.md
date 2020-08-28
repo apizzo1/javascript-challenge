@@ -20,6 +20,10 @@ In the static folder, the following files can be found:
 
 ### General Functionality and Error Handling
 
+When using the index.html file in UFO-Level-1, the user is prompted to enter a date only (in 1/1/2010 format). 
+
+When using the index.html file in UFO-Level-2, the user is able to enter criteria for multiple categories and the sightings data will be filtered accordingly. 
+
 The user can either use the filter button or hit Enter to filter the sightings data. The user can click "UFO Sightings" in the upper left corner of the page to refresh the table (and show all sightings again). This can also be done by clearing all the filter input boxes and clicking the Filter button (or hitting Enter).
 
 Some error handling has been included. Each filter (excluding date) accepts upper or lower case entries from the user. If the user inputs any entries that cannot be found in the data (or multiple entries that, together, result in 0 output rows) an alert message will appear. 
