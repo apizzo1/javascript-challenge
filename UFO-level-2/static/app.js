@@ -97,10 +97,10 @@ function FilterData() {
     var shape_data = country_data.filter(country_data =>  country_data.shape === inputValue_shape);
   }
 
-    // checking filteredData length - if 0, show alert to user that no sightings were found
-    if (shape_data.length === 0) {
-      alert.attr("class", "alert alert-secondary alert_details");
-    }
+  // checking filteredData length - if 0, show alert to user that no sightings were found
+  if (shape_data.length === 0) {
+    alert.attr("class", "alert alert-secondary alert_details");
+  }
 
   // // create new row for each sighting on filtered data
   // shape_data is the last filter so this is the final data to output

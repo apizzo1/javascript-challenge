@@ -10,6 +10,9 @@ var button = d3.select("#button");
 // Select the form
 var form = d3.select("form");
 
+// select the alert 
+var alert = d3.select(".alert");
+
 // add all data to table to begin
 tableData.forEach(sighting => {
   // for each signting append table row to table body
@@ -36,6 +39,9 @@ function FilterData() {
   // source: 09-Par_Form_Filter activity
   tbody.html("");
 
+  // remove alert
+  alert.attr("class", "alert alert-secondary alert_hide");
+
   // Select the input element 
   var inputElement = d3.select("#inputDefault");
 
@@ -45,17 +51,12 @@ function FilterData() {
   // filter data.js for dates matching input value date
   var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
 
+
+
   // checking filteredData length - if 0, show alert to user that no sightings were found
   if (filteredData.length === 0) {
-    // select body
-    var body = d3.select("body");
-    // append div containing alert classes
-    var alert = body.append("div");
     alert.attr("class", "alert alert-secondary alert_details");
-    // add message to user
-    var alert_text = alert.append("p").text("Oops! - no sightings match your selection");
-    alert_text.attr("class","center_txt");
-  }
+  };
 
   // // create new row for each sighting on filtered date
   filteredData.forEach(sighting => {

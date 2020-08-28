@@ -86,8 +86,3 @@
 .alert_hide {
   visibility: hidden;
 }
-
-.alert_center {
-  margin-left: auto;
-  margin-right: auto;
-}
