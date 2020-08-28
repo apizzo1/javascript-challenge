@@ -78,4 +78,11 @@
     background-position-y: bottom;
   }
 
+  .alert_details {
+    width: 450px;
+    height:50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 

@@ -45,6 +45,18 @@ function FilterData() {
   // filter data.js for dates matching input value date
   var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
 
+  // checking filteredData length - if 0, show alert to user that no sightings were found
+  if (filteredData.length === 0) {
+    // select body
+    var body = d3.select("body");
+    // append div containing alert classes
+    var alert = body.append("div");
+    alert.attr("class", "alert alert-secondary alert_details");
+    // add message to user
+    var alert_text = alert.append("p").text("Oops! - no sightings match your selection");
+    alert_text.attr("class","center_txt");
+  }
+
   // // create new row for each sighting on filtered date
   filteredData.forEach(sighting => {
     // for each filtered signting append table row to table body
