@@ -10,6 +10,9 @@ var button = d3.select("#button");
 // Select the forms
 var form = d3.selectAll("form");
 
+// select the alert 
+var alert = d3.select(".alert");
+
 // add all data to table to begin
 tableData.forEach(sighting => {
   // for each signting append table row to table body
@@ -34,6 +37,8 @@ function FilterData() {
   // clear table (remove any children from the table body
   // source: 09-Par_Form_Filter activity
   tbody.html("");
+  // remove alert
+  alert.attr("class", "alert alert-secondary alert_hide");
 
   // Select the input elements
   var inputElement_date = d3.select("#date");
@@ -91,6 +96,11 @@ function FilterData() {
   else {
     var shape_data = country_data.filter(country_data =>  country_data.shape === inputValue_shape);
   }
+
+    // checking filteredData length - if 0, show alert to user that no sightings were found
+    if (shape_data.length === 0) {
+      alert.attr("class", "alert alert-secondary alert_details");
+    }
 
   // // create new row for each sighting on filtered data
   // shape_data is the last filter so this is the final data to output

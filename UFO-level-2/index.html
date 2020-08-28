@@ -17,13 +17,14 @@
     <nav class="navbar  navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">UFO Sightings</a>
     </nav>
-    
+
     <div class="container-fluid">
         <div class="jumbotron_update hero">
             <!-- animations source: https://animate.style/#attention_seekers -->
-            <h1 id = "header1" class="center_txt animate__animated animate__fadeInUp">UFO Sightings</h1>
+            <h1 id="header1" class="center_txt animate__animated animate__fadeInUp">UFO Sightings</h1>
             <!-- animations source: https://animate.style/#attention_seekers -->
-            <h3 id = "header2" class = "center_txt animate__animated animate__fadeInUp animate__delay-1s">What will you find?</h3>
+            <h3 id="header2" class="center_txt animate__animated animate__fadeInUp animate__delay-1s">What will you
+                find?</h3>
         </div>
     </div>
 
@@ -46,14 +47,14 @@
         <div>
             <table class="table table-hover table_border">
                 <thead>
-                    <tr class = "table-active"> 
-                        <th class = "table_text" scope="col">Date</th>
-                        <th class = "table_text" scope="col">City</th>
-                        <th class = "table_text" scope="col">State</th>
-                        <th class = "table_text" scope="col">Country</th>
-                        <th class = "table_text" scope="col">Shape</th>
-                        <th class = "table_text" scope="col">Duration</th>
-                        <th class = "table_text" scope="col">Comment</th>
+                    <tr class="table-active">
+                        <th class="table_text" scope="col">Date</th>
+                        <th class="table_text" scope="col">City</th>
+                        <th class="table_text" scope="col">State</th>
+                        <th class="table_text" scope="col">Country</th>
+                        <th class="table_text" scope="col">Shape</th>
+                        <th class="table_text" scope="col">Duration</th>
+                        <th class="table_text" scope="col">Comment</th>
                     </tr>
                     <!-- Filter Forms -->
                     <tr class="table-active">
@@ -85,12 +86,16 @@
                         <th></th>
                         <th></th>
                     </tr>
-               
+
                 </thead>
                 <tbody>
 
                 </tbody>
             </table>
+            <!-- add invisible alert - will be visible if user enters criteria that is not available -->
+            <div class="alert alert-secondary alert_hide">
+                <p>Oops! No sightings match your selections.</p>
+            </div>
         </div>
 
     </div>
