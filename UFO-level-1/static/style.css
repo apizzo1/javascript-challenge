@@ -35,62 +35,62 @@
     margin-bottom: 2rem;
     background-color: #073642;
     border-radius: 0.3rem;
-  }
+}
 
-  /* padding below filter form */
-  .padding_form {
-    margin-bottom: 10px ;
-    margin-top: 10px;
-  }
+/* padding below filter form */
+.padding_form {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
-  /* setting card dimensions with filter information */
-  .card_width {
-    max-width: 15rem;
-    height: 13rem;
-  }
+/* setting card dimensions with filter information */
+.card_width {
+  max-width: 15rem;
+  height: 13rem;
+}
 
-  /* format table text to be centered */
-  .table_text {
-    text-align: center;
-  }
+/* format table text to be centered */
+.table_text {
+  text-align: center;
+}
 
-  /* format table with borders */
-  .table_border {
-    border: 2px solid rgba(255, 255, 255, 0.075);
-  }
+/* format table with borders */
+.table_border {
+  border: 2px solid rgba(255, 255, 255, 0.075);
+}
 
-  /* animation delay for subtitle */
+/* animation delay for subtitle */
 .delay {
   --animate-delay: 1.5s;
 }
 
-  /* code from example index.html provided in HW 14 */
-  /* background image details */
-  .hero {
-    position: relative;
-    height: 650px;
-    padding: 20px;
-    margin: 0;
-    background: black;
-    /* trees_nightsky - source:https://unsplash.com/photos/UFqKI4QWd2k */
-    background-image: url("../Images/trees_nightsky.jpg");
-    background-position:center;
-    background-size: cover;
-    background-position-y: bottom;
-  }
+/* code from example index.html provided in HW 14 */
+/* background image details */
+.hero {
+  position: relative;
+  height: 650px;
+  padding: 20px;
+  margin: 0;
+  background: black;
+  /* trees_nightsky - source:https://unsplash.com/photos/UFqKI4QWd2k */
+  background-image: url("../Images/trees_nightsky.jpg");
+  background-position:center;
+  background-size: cover;
+  background-position-y: bottom;
+}
 
-  /* styling for when alert is visible to user */
-  .alert_details {
-    width: 450px;
-    height:50px;
-    margin-left: auto;
-    margin-right: auto;
-    visibility: visible;
-  }
+/* styling for when alert is visible to user */
+.alert_details {
+  width: 450px;
+  height:50px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: visible;
+}
 
-  /* hide alert until user inputs criteria that cannot be found */
-  .alert_hide {
-    visibility: hidden;
-  }
+/* hide alert until user inputs criteria that cannot be found */
+.alert_hide {
+  visibility: hidden;
+}
 
 
