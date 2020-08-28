@@ -18,7 +18,9 @@ In the static folder, the following files can be found:
 * bootstrap.css, which contains the Bootstrap theme styling for the index.html
 * app.js, which contains all the functionality to add all the UFO sightings to the index.html to start and then filter according to the user's inputs (as well as alert the user if their inputs yielded no sightings data)
 
-### Error Handling
+### General Functionality and Error Handling
+
+The user can either use the filter button or hit Enter to filter the sightings data. The user can click "UFO Sightings" in the upper left corner of the page to refresh the table (and show all sightings again). This can also be done by clearing all the filter input boxes and clicking the Filter button (or hitting Enter).
 
 Some error handling has been included. Each filter (excluding date) accepts upper or lower case entries from the user. If the user inputs any entries that cannot be found in the data (or multiple entries that, together, result in 0 output rows) an alert message will appear. 
 
